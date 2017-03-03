@@ -1,0 +1,15 @@
+<div class="pagination">
+    <span class="step-links">
+        {% if posts.has_next %}
+            <a href="?page={{ posts.next_page_number }}">التالى </a>
+        {% endif %}
+
+        <span class="current">
+            صفحه  {{ posts.number }} من {{ posts.paginator.num_pages }}
+        </span>
+        {% if posts.has_previous %}
+            <a href="?page={{ posts.previous_page_number }}">سابق</a>
+        {% endif %}
+
+    </span>
+</div>
